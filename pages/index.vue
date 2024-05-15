@@ -46,11 +46,25 @@ function logout() {
   button {
     height: auto;
   }
+
+  @media screen and (max-width: 720px) {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    gap: 15px;
+  }
 }
 
 .page-body {
   display: grid;
   grid-template-columns: 1fr 300px;
   gap: 30px;
+
+  @media screen and (max-width: 720px) {
+    grid-template-columns: 1fr;
+
+    :deep(.task-list) {
+      order: 2;
+    }
+  }
 }
 </style>
